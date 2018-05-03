@@ -1,0 +1,21 @@
+# 変数を格納して使ってみるサンプル
+timezone: UTC
+
+_export:
+  rb:
+    require: 'tasks/attribute_example.rb'
+
++prepare:
+  # ここで変数を格納してみたタスク
+  # my_param1とmy_param2が以降のタスクで使えるようになるはず。
+  py>: tasks.attribute_example.Attribute.prepare
+
+# my_param1とmy_param2が使えるか確認
++analyze1:
+  sh>: echo ${my_param1} and ${my_param2}
+
+
++analyze2:
+  rb>: Attribute.hogehoge
+  # rb>: Attribute.sample(my_param1,my_param2)
+  

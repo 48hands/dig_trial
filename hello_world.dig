@@ -1,0 +1,42 @@
+timezone: UTC
+
+_export:
+  rb:
+    require: "tasks/ruby_sample.rb"
+
++prepare:
+  sh>: echo "Goodbye World"
+
++analyze:
+  _export:
+    bar: 2
+
+  +hogehoge:
+    sh>: echo Yahhoo ${bar}
+
++step1:
+  sh>: echo "hello world"
+
++step2:
+  sh>: ./tasks/shell_sample.sh
+
++say_hello:
+  sh>: echo "Say Goodbye"
+
++step3:
+  rb>: MyWorkflow.ruby_task0
+
++step4:
+  rb>: MyWorkflow.ruby_task1
+  arg1: this is arg1
+
++step5:
+  rb>: MyWorkflow.ruby_task2
+  arg2: this is arg2
+  
++step6:
+  py>: tasks.python_sample.MyWorkflow.step1
+  param1: this is param1
+  
+
+  

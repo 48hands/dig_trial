@@ -1,0 +1,20 @@
+timezone: UTC
+
++prepare:
+  # data1,data2,data3 parallel execute
+  _parallel: true
+  _export:
+    rb:
+      require: 'tasks/parallel_sample'
+
+  +data1:
+    rb>: Parallel.data1
+  
+  +data2:
+    rb>: Parallel.data2
+
+  +data3:
+    rb>: Parallel.data3
+
++analyze:
+  sh>: echo data1, data2, data3 fineshed!!

@@ -1,0 +1,6 @@
+2018-05-04 02:07:11 +0900 [INFO] (main) io.digdag.core.crypto.SecretCryptoProvider: secret encryption engine: disabled
+2018-05-04 02:07:11 +0900 [INFO] (main) io.digdag.cli.RevisionAutoReloader$ReloadTarget: Added new revision 1
+2018-05-04 02:07:11 +0900 [INFO] (main) org.xnio.Xnio: XNIO version 3.3.6.Final
+2018-05-04 02:07:11 +0900 [INFO] (main) org.xnio.nio.NioXnio: XNIO NIO Implementation Version 3.3.6.Final
+2018-05-04 02:07:11 +0900 [INFO] (main) io.digdag.guice.rs.server.undertow.UndertowServer: Starting server on 127.0.0.1:65432
+2018-05-04 02:07:11 +0900 [INFO] (main) io.digdag.guice.rs.server.undertow.UndertowServer: Bound on 127.0.0.1:65432 (api)

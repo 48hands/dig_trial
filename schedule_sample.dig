@@ -1,0 +1,26 @@
+timezone: UTC
+
+schedule:
+  daily>: 07:00:00
+
+  _parallel: true
+  _export:
+    rb:
+      require: 'tasks/parallel_sample'
+
+  +data1:
+    rb>: Parallel.data1
+  
+  +data2:
+    rb>: Parallel.data2
+
+  +data3:
+    rb>: Parallel.data3
+
+  +ended:
+    sh>: echo "Finished tasks" > /tmp/daily_result.txt
+
+  
+  weekly>: Sun,07:30:00
+  +step2:
+    sh>: echo "hogehoge Weekly 7 oclock" > /tmp/weekly_result.txt
