@@ -1,0 +1,19 @@
+timezone: Asia/Tokyo
+
+_export:
+  rb:
+    require: 'tasks/count_sample'
+
++prepare:
+  sh>: echo "Goodbye World"
+
++step1:
+  _retry: 3
+  rb>: FileCountSample.is_received
+  
++step2:
+  sh>: echo "Mission Completed!!"
+
+  
+
+  

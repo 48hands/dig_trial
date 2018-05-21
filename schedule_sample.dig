@@ -1,7 +1,8 @@
 timezone: UTC
 
 schedule:
-  daily>: 07:00:00
+  # daily>: 07:00:00
+  minutes_interval>: 1
 
   _parallel: true
   _export:
@@ -9,6 +10,7 @@ schedule:
       require: 'tasks/parallel_sample'
 
   +data1:
+    _retry: 5
     rb>: Parallel.data1
   
   +data2:
