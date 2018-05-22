@@ -1,0 +1,20 @@
+_export:
+  pg:
+    host: localhost
+    port: 5432
+    database: lesson
+    user: nagakuray
+    # ssl: true
+    schema: public
+    # strict_transaction: false
+
++hello:
+  sh>: echo $HOME
+
++insert_table:
+  pg>: queries/insert_table.sql
+
++sample_show_table:
+  pg>: queries/show_table.sql
+  download_file: output.csv
+
